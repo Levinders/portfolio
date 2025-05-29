@@ -20,14 +20,14 @@
       padding: 0;
       height: 100%;
       width: 100%;
-      background: url('https://raw.githubusercontent.com/Levinders/Looker-Portfolio-Pictures/refs/heads/main/Data%20Portfolio%20(LookerStudio)%20(6).png') no-repeat center center fixed;
+      background: no-repeat center center fixed;
       background-size: cover;
     }
 
     .button-wrapper {
       position: absolute;
-      bottom: 200px;
-      left: 250px;
+      bottom: 140px;
+      left: 270px;
       display: flex;
       gap: 20px;
     }
@@ -60,12 +60,42 @@
       background-color: #7EDEAF;
       color: #000000;
     }
+
+    .mobile-only {
+      display: none;
+    }
+
+    .desktop-only {
+      display: flex;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background-image: url('https://raw.githubusercontent.com/Levinders/Looker-Portfolio-Pictures/refs/heads/main/Untitled%20design%20(5).png');
+      }
+      .desktop-only {
+        display: none;
+      }
+      .mobile-only {
+        display: flex;
+        bottom: 100px;
+        left: 40px;
+      }
+    }
+
+    @media (min-width: 769px) {
+      body {
+        background-image: url('https://raw.githubusercontent.com/Levinders/Looker-Portfolio-Pictures/refs/heads/main/welcome_pix.png');
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="button-wrapper">
-    <button class="btn desktop-btn" onclick="openPortfolio()">💻 Desktop View</button>
-    <button class="btn mobile-btn" onclick="openPortfolio()">📱 Mobile View</button>
+  <div class="button-wrapper desktop-only">
+    <button class="btn desktop-btn" onclick="openPortfolio()">Desktop View</button>
+  </div>
+  <div class="button-wrapper mobile-only">
+    <button class="btn mobile-btn" onclick="openPortfolio()">Mobile View</button>
   </div>
 
   <script>
