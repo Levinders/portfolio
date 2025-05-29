@@ -20,7 +20,7 @@
       padding: 0;
       height: 100%;
       width: 100%;
-      background: url('https://raw.githubusercontent.com/Levinders/Looker-Portfolio-Pictures/refs/heads/main/welcome_pix.png') no-repeat center center fixed;
+      background: url('https://raw.githubusercontent.com/Levinders/Looker-Portfolio-Pictures/refs/heads/main/Data%20Portfolio%20(LookerStudio)%20(7).png') no-repeat center center fixed;
       background-size: cover;
     }
 
@@ -30,21 +30,21 @@
         background-size: cover;
       }
 
-      .desktop-btn {
+      .desktop-wrapper {
         display: none;
       }
 
-      .mobile-btn {
-        display: inline-block;
+      .mobile-wrapper {
+        display: block;
       }
     }
 
     @media only screen and (min-width: 769px) {
-      .desktop-btn {
-        display: inline-block;
+      .desktop-wrapper {
+        display: block;
       }
 
-      .mobile-btn {
+      .mobile-wrapper {
         display: none;
       }
     }
@@ -53,8 +53,6 @@
       position: absolute;
       bottom: 200px;
       left: 350px;
-      display: flex;
-      gap: 20px;
     }
 
     .btn {
@@ -63,6 +61,9 @@
       border-radius: 100px;
       cursor: pointer;
       transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .desktop-btn {
@@ -89,18 +90,24 @@
   </style>
 </head>
 <body>
-  <div class="button-wrapper">
-    <button class="btn desktop-btn" onclick="openDesktop()">Desktop View</button>
-    <button class="btn mobile-btn" onclick="openMobile()">Mobile View</button>
+
+  <!-- Desktop Button -->
+  <div class="button-wrapper desktop-wrapper">
+    <button class="btn desktop-btn" onclick="openDesktop()"> Desktop View</button>
+  </div>
+
+  <!-- Mobile Button -->
+  <div class="button-wrapper mobile-wrapper">
+    <button class="btn mobile-btn" onclick="openMobile()"> Mobile View</button>
   </div>
 
   <script>
     function openDesktop() {
-      window.location.href = "https://lookerstudio.google.com/embed/reporting/00e563a5-5b49-4e0e-9fe2-995e8716dbdd/page/p_oyiouzbtsd"; // Replace with actual desktop link
+      window.location.href = "https://lookerstudio.google.com/embed/reporting/00e563a5-5b49-4e0e-9fe2-995e8716dbdd/page/p_oyiouzbtsd";
     }
 
     function openMobile() {
-      window.location.href = "https://lookerstudio.google.com/embed/reporting/00e563a5-5b49-4e0e-9fe2-995e8716dbdd/page/p_oyiouzbtsd"; // Replace with actual mobile link
+      window.location.href = "https://lookerstudio.google.com/embed/reporting/00e563a5-5b49-4e0e-9fe2-995e8716dbdd/page/p_oyiouzbtsd";
     }
   </script>
 </body>
