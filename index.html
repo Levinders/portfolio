@@ -20,8 +20,33 @@
       padding: 0;
       height: 100%;
       width: 100%;
-      background: no-repeat center center fixed;
+      background: url('https://raw.githubusercontent.com/Levinders/Looker-Portfolio-Pictures/refs/heads/main/welcome_pix.png') no-repeat center center fixed;
       background-size: cover;
+    }
+
+    @media only screen and (max-width: 768px) {
+      html, body {
+        background: url('https://raw.githubusercontent.com/Levinders/Looker-Portfolio-Pictures/refs/heads/main/Untitled%20design%20(5).png') no-repeat center center fixed;
+        background-size: cover;
+      }
+
+      .desktop-btn {
+        display: none;
+      }
+
+      .mobile-btn {
+        display: inline-block;
+      }
+    }
+
+    @media only screen and (min-width: 769px) {
+      .desktop-btn {
+        display: inline-block;
+      }
+
+      .mobile-btn {
+        display: none;
+      }
     }
 
     .button-wrapper {
@@ -33,7 +58,7 @@
     }
 
     .btn {
-      padding: 14px 28px;
+      padding: 10px 20px;
       font-size: 14px;
       border-radius: 100px;
       cursor: pointer;
@@ -41,13 +66,14 @@
     }
 
     .desktop-btn {
-      background-color: #7EDEAF;
+      background-color: transparent;
       color: black;
       border: none;
     }
 
     .desktop-btn:hover {
-      background-color: #66c99b;
+      background-color: #7EDEAF;
+      color: #000000;
     }
 
     .mobile-btn {
@@ -60,47 +86,21 @@
       background-color: #7EDEAF;
       color: #000000;
     }
-
-    .mobile-only {
-      display: none;
-    }
-
-    .desktop-only {
-      display: flex;
-    }
-
-    @media (max-width: 768px) {
-      body {
-        background-image: url('https://raw.githubusercontent.com/Levinders/Looker-Portfolio-Pictures/refs/heads/main/Untitled%20design%20(5).png');
-      }
-      .desktop-only {
-        display: none;
-      }
-      .mobile-only {
-        display: flex;
-        bottom: 100px;
-        left: 40px;
-      }
-    }
-
-    @media (min-width: 769px) {
-      body {
-        background-image: url('https://raw.githubusercontent.com/Levinders/Looker-Portfolio-Pictures/refs/heads/main/welcome_pix.png');
-      }
-    }
   </style>
 </head>
 <body>
-  <div class="button-wrapper desktop-only">
-    <button class="btn desktop-btn" onclick="openPortfolio()">Desktop View</button>
-  </div>
-  <div class="button-wrapper mobile-only">
-    <button class="btn mobile-btn" onclick="openPortfolio()">Mobile View</button>
+  <div class="button-wrapper">
+    <button class="btn desktop-btn" onclick="openDesktop()">Desktop View</button>
+    <button class="btn mobile-btn" onclick="openMobile()">Mobile View</button>
   </div>
 
   <script>
-    function openPortfolio() {
-      window.location.href = "https://lookerstudio.google.com/embed/reporting/00e563a5-5b49-4e0e-9fe2-995e8716dbdd/page/p_oyiouzbtsd";
+    function openDesktop() {
+      window.location.href = "https://lookerstudio.google.com/embed/reporting/00e563a5-5b49-4e0e-9fe2-995e8716dbdd/page/p_oyiouzbtsd"; // Replace with actual desktop link
+    }
+
+    function openMobile() {
+      window.location.href = "https://lookerstudio.google.com/embed/reporting/00e563a5-5b49-4e0e-9fe2-995e8716dbdd/page/p_oyiouzbtsd"; // Replace with actual mobile link
     }
   </script>
 </body>
